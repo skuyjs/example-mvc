@@ -1,0 +1,30 @@
+{
+  "name": "example-mvc",
+  "version": "1.0.0",
+  "description": "SkuyJS MVC application example",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skuyjs/example-mvc.git"
+  },
+  "keywords": [],
+  "author": "Hadi Hidayat Hammurabi <hadihammurabi@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/skuyjs/example-mvc/issues"
+  },
+  "homepage": "https://github.com/skuyjs/example-mvc#readme",
+  "dependencies": {
+    "@skuyjs/http-plugin-view": "0.0.2",
+    "@skuyjs/http-server": "0.0.6",
+    "@skuyjs/query-builder": "0.0.2",
+    "ejs": "^3.0.2",
+    "mysql2": "^2.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
+}
