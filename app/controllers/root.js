@@ -1,5 +1,12 @@
 const db = require('../models/database');
 
+const redirect = (res, url) => {
+  res.writeHead(302, {
+    'Location': url,
+  });
+  res.end();
+};
+
 const index = async (req, res) => {
   const todos = await db.table('todos').all();
   res.render('index.ejs', { todos: todos.rows });
@@ -20,10 +27,7 @@ const save = async (req, res) => {
 
   // will update later
   // res.redirect('/');
-  res.writeHead(302, {
-    'Location': '/'
-  });
-  res.end();
+  redirect(res, '/');
 };
 
 module.exports = {
