@@ -12,6 +12,16 @@ const index = async (req, res) => {
   res.render('index.ejs', { todos: todos.rows });
 };
 
+const show = async (req, res) => {
+  const todo = await db.table('todos').where({ id: req.params.id }).get();
+
+  if (todo.length <= 0) {
+    return redirect(res, '/');
+  }
+
+  res.render('show.ejs',  { todo: todo.rows[0] });
+}
+
 const add = (req, res) => {
   res.render('add.ejs');
 };
@@ -32,6 +42,7 @@ const save = async (req, res) => {
 
 module.exports = {
   index,
+  show,
   add,
   save,
 };
