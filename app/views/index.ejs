@@ -16,7 +16,9 @@
 
   <% todos.forEach(todo => { %>
     <div>
-      <h3 style="margin-bottom: 0"><%= todo.title %></h3>
+      <a href="/<%= todo.id %>">
+        <h3 style="margin-bottom: 0"><%= todo.title %></h3>
+      </a>
       <p style="margin-top: 0"><%= todo.description %></p>
     </div>
   <% }) %>
