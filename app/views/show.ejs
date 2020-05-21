@@ -13,6 +13,11 @@
   <div>
     <h3 style="margin-bottom: 0"><%= todo.title %></h3>
     <p style="margin-top: 0"><%= todo.description %></p>
+    <div>
+      <a href="/<%= todo.id %>/delete">
+        <button>Hapus</button>
+      </a>
+    </div>
   </div>
 </body>
 </html>
