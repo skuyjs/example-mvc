@@ -40,10 +40,17 @@ const save = async (req, res) => {
   redirect(res, '/');
 };
 
+const del = async (req, res) => {
+  const { id } = req.params;
+  await db.table('todos').where({ id }).del();
+  redirect(res, '/');
+};
+
 module.exports = {
   index,
   show,
   add,
   save,
+  del,
 };
 
