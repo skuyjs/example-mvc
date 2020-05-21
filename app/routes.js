@@ -6,6 +6,7 @@ route.get('', rootController.index);
 route.get('add', rootController.add);
 route.post('add', rootController.save);
 route.get(':id', rootController.show);
+route.get(':id/delete', rootController.del);
 
 const routes = (app) => {
   app.use('/', route);
